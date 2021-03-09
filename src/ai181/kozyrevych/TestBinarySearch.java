@@ -21,4 +21,5 @@ public class TestBinarySearch {
 
         QuickSort.sort(nums);
         assertTrue(Arrays.equals(nums_copy, nums));
-    }}
+    }
+}
