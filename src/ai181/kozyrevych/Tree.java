@@ -116,6 +116,15 @@ class Tree<T extends Comparable<T>> {
         return node.val;
     }
 
+    private T getRightNode(Node<T> node) {
+        node = node.leftNode;
+
+        while (node.rightNode != null) {
+            node = node.rightNode;
+        }
+        return node.val;
+    }
+
     public StringBuilder toString(StringBuilder prefix, boolean isTail, StringBuilder sb, Node<T> root) {
         //prefix - времененное хранилище для одной строки дерева
         //sb постоянное хранилище для всех строк (то есть sb это совокупность префиксов)
