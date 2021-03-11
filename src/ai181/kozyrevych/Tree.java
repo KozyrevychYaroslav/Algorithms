@@ -97,7 +97,7 @@ class Tree<T extends Comparable<T>> {
             if (node.rightNode == null && node.leftNode == null) {
                 node = null;
             } else if (node.rightNode == null) {
-                node.val = node.leftNode.val;
+                node.val = getRightNode(node);
                 node.leftNode = _remove(node.leftNode, node.val);
             } else {
                 node.val = getLeftNodeOfRightNode(node);
