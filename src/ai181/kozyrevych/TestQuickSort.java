@@ -14,7 +14,7 @@ public class TestQuickSort {
     @DisplayName("Testing Quick sort")
     @RepeatedTest(value = 100)
     public void testSort() {
-        int[] nums = new Random().ints(10000, 0, 10000).toArray();
+        int[] nums = new Random().ints(10, 0, 10000).toArray();
         int[] nums_copy = Arrays.copyOf(nums, nums.length);
 
         Arrays.parallelSort(nums_copy);
